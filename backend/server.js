@@ -4,6 +4,8 @@ const router = require("./routes/auth-routes");
 const app = express();
 const port = 3000;
 
+app.use(express.json());
+
 // ? we won't be needing app.get() walay routes as now routes are defined in routes folder and here used as middleware
 app.use('/api/auth', router);
 
